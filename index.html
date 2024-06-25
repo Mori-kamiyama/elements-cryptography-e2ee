@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements-cryptography</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code4fukui.github.io/sec.js/sec.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>原子記号暗号化</h1>
+    <div class="container">
+        <h2>暗号化</h2>
+        <p>全ての文字に対応しています</p>
+        <div class="input-group">
+            <label for="encryptionInput">文章</label>
+            <input type="text" id="encryptionInput" placeholder="文章を入力" class="placeholder">
+        </div>
+        <button id="encryption">暗号化する</button>
+        <div class="input-group">
+            <label for="shareKeyIn">共通鍵</label>
+            <input type="text" id="shareKeyIn" placeholder="共通鍵を入力">
+        </div>
+        <div id="encryptionResult">暗号化された文章:</div>
+    </div>
+    
+    <div class="container">
+        <h2>復号化</h2>
+        <p>最初は大文字で、区切りはスペースかカンマで入力してください</p>
+        <div class="input-group">
+            <label for="decryptionInput">文章</label>
+            <input type="text" id="decryptionInput" placeholder="文章を入力" class="placeholder">
+        </div>
+        <button id="decryption">復号化する</button>
+        <div class="input-group">
+            <label for="shareKeyOut">共通鍵</label>
+            <input type="text" id="shareKeyOut" placeholder="共通鍵を入力">
+        </div>
+        <div id="decryptionResult">復号化された文章:</div>
+    </div>
+
+    <div class="container">
+        <h2>共通暗号作成</h2>
+        <div class="input-group">
+            <label for="privateKey">秘密鍵</label>
+            <input type="text" id="privateKey" placeholder="秘密鍵を入力">
+        </div>
+        <div class="input-group">
+            <label for="publicKey">公開鍵</label>
+            <input type="text" id="publicKey" placeholder="公開鍵を入力">
+        </div>
+        <div class="input-group">
+            <label for="otherPublicKey">相手の公開鍵</label>
+            <input type="text" id="otherPublicKey" placeholder="相手の公開鍵を入力">
+        </div>
+        <button id="commonKey">秘密鍵、公開鍵を作る</button>
+        <button id="generateCommonKey">共通鍵を作る</button>
+        <div id="keyResult">生成した共通鍵:</div>
+    </div>
+
+    <p>created by Morikawa Yuta</p>
+    <p>Lib: 2020 Taisuke Fukuno https://github.com/code4sabae/e2ee</p>
+</body>
+</html>
