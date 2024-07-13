@@ -86,6 +86,26 @@ button:hover {
     transform: translateY(-2px);
 }
 
+img {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    display: grid;
+    place-items: center;
+}
+#encryptionResult {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+#copyButtonPublic {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
 #encryptionResult, #decryptionResult, #keyResult {
     background-color: #e0e7ff;
     border: 1px solid #c3dafe;
