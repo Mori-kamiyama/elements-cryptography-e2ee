@@ -138,3 +138,37 @@ function generateElementsArray() {
 
     return elementSymbols;
 }
+
+document.getElementById("copyButtonEncy").addEventListener("click", function() {
+    var textToCopy = document.getElementById("encryptionResult").innerText;
+
+    var tempTextArea = document.createElement('textarea');
+    tempTextArea.value = textToCopy;
+    document.body.appendChild(tempTextArea);
+
+    tempTextArea.select();
+    tempTextArea.setSelectionRange(0, 99999);
+
+    document.execCommand('copy');
+
+    document.body.removeChild(tempTextArea);
+
+    alert('テキストがコピーされました: ' + textToCopy);
+});
+
+document.getElementById('copyButtonPublic').addEventListener('click', function() {
+    var textToCopy = document.getElementById('publicKey').value;
+
+    var tempTextArea = document.createElement('textarea');
+    tempTextArea.value = textToCopy;
+    document.body.appendChild(tempTextArea);
+
+    tempTextArea.select();
+    tempTextArea.setSelectionRange(0, 99999);
+
+    document.execCommand('copy');
+
+    document.body.removeChild(tempTextArea);
+
+    alert('テキストがコピーされました: ' + textToCopy);
+});
